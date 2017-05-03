@@ -3,13 +3,13 @@ package model;
 import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import javax.faces.*;
 
+@SuppressWarnings("serial")
 @ManagedBean
 @SessionScoped
-//contrainte BEAN implements Serializable
 public class UserModelBean implements Serializable{
 	
+	// Propiétés :
 	private String	lastname;
 	private String	surname;
 	private int 	age;
@@ -45,5 +45,4 @@ public class UserModelBean implements Serializable{
 	public String toString() {
 	return "[SURNAME]:"+this.getSurname()+",[LASTNAME]:"+this.getLastname()+",[AGE]:"+this.getAge()+",[LOGIN]:"+this.getLogin()+",[PWD]:"+this.getPwd();
 	}
-
 }
