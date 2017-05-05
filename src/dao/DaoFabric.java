@@ -45,5 +45,4 @@ public class DaoFabric {
 		UserDao(this.DB_HOST,this.DB_PORT,this.DB_NAME,this.DB_USER,this.DB_PWD);
 		return userDao;
 	}
-		
 }
