@@ -20,7 +20,7 @@ public class Environnement {
                 //System.out.print(matrice_env[i][j] + " ");
                 
             }
-            //System.out.println();
+            //System.out.println();  
         }
 	}
 	
