@@ -8,18 +8,16 @@
 }
 
 footer {
-	position: relative;
+	margin-bottom: 0px;
 }
 
 body {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 }
 	
 
-#contenu #entete, #menu, #map, #footer {
-padding:1px 0;
-}
 
 #contenu {
 	padding-top: 15px;
@@ -27,7 +25,7 @@ padding:1px 0;
  	padding-right: 35px;
  	max-with:960px;	
  	margin:auto;
- 	margin-bottom: 40px;
+ 	margin-bottom: 80px;
 }
 #main {
 	max-with:960px;
@@ -38,13 +36,13 @@ padding:1px 0;
 	width:250px;
 	background-color:#edeff1;
 	border-radius: 6px;
-	height: 600px;
+	height: 500px;
 }
 #map {
 	margin-right:280px;
 	background-color:#edeff1;
 	border-radius: 6px;
-	height: 600px;
+	height: 500px;
 }
 #graphiques {
 	background-color:#edeff1;
@@ -53,18 +51,32 @@ padding:1px 0;
 	margin-top: 30px;
 }
 
-
-#interface{
-	margin-left: 50px;
-    margin-top: 50px;
-    float: left;
-    border-right: 1px solid gray;
-    list-style-type:none;
+.fleches-directionnels {	
+	margin-left:110px;
+  	display: flex;
+  	justify-content: center;
+  	background-color: red;
 }
+.fleche {
+	margin: 5px;
+}
+.haut {
+	margin-bottom: 15px;
+}
+.bouton-reset {	
+	margin-left:55px;
+	margin-top: 60px;
+  	display: flex;
+  	justify-content: center;
+}
+
+
+
+
 #affichageMesure{
 	margin-left: 50px;
-    margin-top: 50px;
-        display: inline-block;
+    	margin-top: 50px;
+     display: inline-block;
 }
 #Boutons-directionels{
 	margin-left: 20%;
@@ -92,11 +104,7 @@ padding:1px 0;
 	    float: left;
     margin-top: 10px;
 }
-ol, ul {
-    margin-top: 0;
-    margin-bottom: 10px;
-    list-style-type: none;
-}
+
 .LabelTitre{
     margin-bottom: 20px;
     margin-top: 15px;
