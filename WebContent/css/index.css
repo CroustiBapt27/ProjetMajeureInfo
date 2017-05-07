@@ -41,7 +41,7 @@ padding:1px 0;
 	height: 600px;
 }
 #map {
-	margin-right:270px;
+	margin-right:280px;
 	background-color:#edeff1;
 	border-radius: 6px;
 	height: 600px;
@@ -50,140 +50,10 @@ padding:1px 0;
 	background-color:#edeff1;
 	border-radius: 6px;
 	height: 200px;
-	margin-top: 20px;
+	margin-top: 30px;
 }
 
 
-.contenu_general--left_side {
-	display: flex;
-	flex-direction: column;	
-	justify-content: space-between;
-	align-items: center;
-	width: 60vw;
-	height: 900px;
-	padding: 20px;
-}
-
-.contenu_general--left_side--map
-{
-	background-color: #edeff1;
-  	padding: 5px;
-  	position: relative;
- 	border-radius: 6px;
-	flex-direction: column;
-	width: 750px;
-	height: 750px;
-
-}
-
-
-.contenu_general--left_side--under
-{
-	background-color: #edeff1;
-  	padding: 5px;
-  	position: relative;
- 	border-radius: 6px;
-	flex-direction: column;
-	width: 750px;
-	height: 750px;
-}
-
-
-.contenu_general--right_side
-{
-	padding:20px;
-	height: 900px;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-
-
-	border-style: solid;
-	border-width: 3px;
-	border-color: rgba(0,0,0,0.5);
-
-	border-right: none;
-	border-top: none;
-	border-bottom: none;
-	width: 40vw;
-	margin-bottom: 20px;
-
-}
-
-.contenu_general--right_side--parametres
-{
-
-	overflow: auto;
-	height: 50%;
-}
-
-.contenu_general--right_side--parametres
-{
-	width: 100%;
-	background-color: rgba(0,0,0,0.1);
-
-	margin-top:5px;
-	margin-bottom:5px;
-	padding:10px;
-}
-
-.contenu_general--right_side--parametres--nombloc
-{
-	font-size: 2rem;
-}
-
-#contenu_general--right_side--under
-{
-	padding:5px;
-	height: 50%;
-	border-style: solid;
-}
-
-
-
-
-
-
-#head_title{
-	text-align: right;
-    background-color: grey;
-    color: white;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size:20px;
-        height: 50px;
-}
-.link{
-	    text-decoration: none;
-    color: white;
-}
-#LoginButton{
-         color: grey;
-    background-color: grey;
-    height: 50px;
-    text-decoration: none;
-    /* border-radius: 10px 10px 10px 10px; */
-    /* border-color: rgba(165, 157, 157, 0.63); */
-    border: none;
-    }
-    #myButton{
-       float: right;
-    padding: 10px;
-    border-color: grey;
-    border-radius: 10px 10px 10px 10px;
-    background-color: grey;
-    text-decoration: none;
-    color: white;
-    height: 50px;
-    }
-#connection{
-    margin-left: 5%;
-}
-#PageLogin{
-	    float: left;
-}
 #interface{
 	margin-left: 50px;
     margin-top: 50px;
@@ -197,7 +67,7 @@ padding:1px 0;
         display: inline-block;
 }
 #Boutons-directionels{
-	    margin-left: 20%;
+	margin-left: 20%;
 }
 #ButtonLeft{
     float: left;
