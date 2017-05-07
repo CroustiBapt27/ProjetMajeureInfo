@@ -5,6 +5,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core">
 
+<!----------  HEAD  ---------->
 <head>
 	<title>index</title>
    		<!-- Loading Bootstrap -->
@@ -25,82 +26,65 @@
 	<script src="lib/jquery.cookie.js"></script>
 </head>
 
+<!----------  BODY  ---------->
 <body>
+	
+	<!----------  BANIÈRE  ---------->
 	<div class="baniere" align="center">
-			<div class="col-xs-12">
-				<nav class="navbar navbar-inverse navbar-embossed" role="navigation">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse"
-						data-target="#navbar-collapse-01">
-						<span class="sr-only">Toggle navigation</span>
-					</button>
-					<a class="navbar-brand" href="index.html">Projet Majeure</a>
-				</div>
-				<div class="collapse navbar-collapse" id="navbar-collapse-01">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="navbar-right"><a href="userLogin.xhtml">Connection</a></li>
-					</ul>
-					<form class="navbar-form navbar-right"></form>
-				</div>
-				</nav>
+		<div class="col-xs-12">
+			<nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#navbar-collapse-01">
+					<span class="sr-only">Toggle navigation</span>
+				</button>
+				<a class="navbar-brand" href="index.html">Projet Majeure</a>
+			</div> 
+			<div class="collapse navbar-collapse" id="navbar-collapse-01">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="navbar-right"><a href="userLogin.xhtml">Connection</a></li>
+				</ul>
+				<form class="navbar-form navbar-right"></form>
 			</div>
-	</div> <!-- /baniere -->
+			</nav>
+		</div> <!--/col-xs-12-->
+	</div> <!--/baniere-->
 
-	<h3 class="demo-logo" align="center">Simulation</h3>
-
-	<div id="main"> <!-- contenu_general -->
-
-			<div id="contenu_general--left_side--map"> <!-- MAP  -->
-				<p>Map</p>	
-			</div>
-			<div id="contenu_general--left_side--under"> <!-- UNDER  -->
-				<p>Under</p>
-			</div>
-
-			<div id="contenu_general--right_side"> <!-- right_side  -->
-
-				<div id="contenu_general--right_side--parametres"> <!-- PARAMETRES -->
-
-					<div class="contenu_general--right_side--parametres">
-						<p class="contenu_general--right_side--parametres--nombloc">Bloc 1</p>
-						<div> <!--mettre le contenu ici -->
-							<button class="btn btn-hg btn-primary">Parametre a personnaliser</button>
-						</div>
-					</div>
-
-					<div class="contenu_general--right_side--parametres">
-						<p class="contenu_general--right_side--parametres--nombloc">Bloc 2</p>
-						<div> <!--mettre le contenu ici -->
-							<button class="btn btn-hg btn-primary">Parametre a personnaliser</button>
-						</div>
-					</div>
-
-					<div class="contenu_general--right_side--parametres">
-						<p class="contenu_general--right_side--parametres--nombloc">Bloc 3</p>
-						<div> <!--mettre le contenu ici -->
-							<button class="btn btn-hg btn-primary">Parametre a personnaliser</button>
-						</div>
-					</div>
-
-					<div class="contenu_general--right_side--parametres">
-						<p class="contenu_general--right_side--parametres--nombloc">Bloc 4</p>
-						<div><!--mettre le contenu ici -->
-							etc
-						</div>
-					</div>
-				</div> <!-- fin PARAMETRES -->
-
-				<div id="contenu_general--right_side--under">
-					<p>Graphes</p>
-				</div>
-			</div>
-		</div> <!-- fin contenu_general -->
+	<!----------  CONTENU  ---------->
+	<div id="contenu">
+		<div id="main"> 
+			 <div id="menu"> 		<!-- Parametres -->
+			 	<div class="col-xs-3" style="white-space:nowrap">
+			 		<h3 class="demo-panel-title">Parametres</h3>
+			          <label class="checkbox" for="checkbox1">
+			         		<input type="checkbox" checked="checked" id="checkbox1" data-toggle="checkbox">Affichage du robot</input>
+			          </label>
+			          <label class="checkbox" for="checkbox2">
+			            	<input type="checkbox" checked="checked" value="" id="checkbox2" data-toggle="checkbox">Affichage de la trajectoire</input>
+			          </label>
+			          <label class="checkbox" for="checkbox3">
+			            	<input type="checkbox" checked="checked" value="" id="checkbox3" data-toggle="checkbox">Affichage des obstacles</input>
+			          </label>
+			          <label class="checkbox" for="checkbox4">
+			            	<input type="checkbox" value="" id="checkbox4" data-toggle="checkbox">Auto mapping</input>
+			          </label>
+			        </div> 
+			 </div>
+			 <div id="map"> 		<!-- Map -->
+				  <div class="col-xs-3">
+				  	<h3 class="demo-panel-title">Map</h3>
+				  </div> 
+			 </div>
+		</div>
+		<div id="graphiques"> 		<!-- Graphiques  -->
+			<div class="col-xs-3">
+			  	<h3 class="demo-panel-title">Graphiques</h3>
+			 </div> <!-- /checkboxes col-xs-3 -->
+		</div>
+	</div>
 
 	
-	
-	
-	
-	
+	<!----------  FOOTER  ---------->
 	<footer>
       <div class="container">
             <p>
@@ -110,11 +94,11 @@
       </div>
     </footer>
 	
-    <script src="dist/js/vendor/jquery.min.js"></script>
-    <script src="dist/js/vendor/video.js"></script>
-    <script src="dist/js/flat-ui.min.js"></script>
-    <script src="docs/assets/js/application.js"></script>
-
+	<!----------  SCRIPTS  ---------->
+	<script src="dist/js/vendor/jquery.min.js"></script>
+    	<script src="dist/js/vendor/video.js"></script>
+    	<script src="dist/js/flat-ui.min.js"></script>
+    	<script src="docs/assets/js/application.js"></script>
 
 </body>
 </html>

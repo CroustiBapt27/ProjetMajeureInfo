@@ -11,28 +11,50 @@ footer {
 	position: relative;
 }
 
-body
-{
+body {
 	display: flex;
 	flex-direction: column;
-	margin:0px;
-	padding:0px;
+}
+	
+
+#contenu #entete, #menu, #map, #footer {
+padding:1px 0;
 }
 
-h2
-{
-	align-self: center;
+#contenu {
+	padding-top: 15px;
+  	padding-left: 35px;
+ 	padding-right: 35px;
+ 	max-with:960px;	
+ 	margin:auto;
+ 	margin-bottom: 40px;
+}
+#main {
+	max-with:960px;
+	margin:auto;	
+}
+#menu  {
+	float:right;
+	width:250px;
+	background-color:#edeff1;
+	border-radius: 6px;
+	height: 600px;
+}
+#map {
+	margin-right:270px;
+	background-color:#edeff1;
+	border-radius: 6px;
+	height: 600px;
+}
+#graphiques {
+	background-color:#edeff1;
+	border-radius: 6px;
+	height: 200px;
+	margin-top: 20px;
 }
 
-#main
-{
-	display: flex;
-	position: relative;
-	margin: 0px 20px 0px 20px;
-	padding: 20px 0px 0px;
-}
-#contenu_general--left_side
-{
+
+.contenu_general--left_side {
 	display: flex;
 	flex-direction: column;	
 	justify-content: space-between;
@@ -40,11 +62,9 @@ h2
 	width: 60vw;
 	height: 900px;
 	padding: 20px;
-
-
 }
 
-#contenu_general--left_side--map
+.contenu_general--left_side--map
 {
 	background-color: #edeff1;
   	padding: 5px;
@@ -57,7 +77,7 @@ h2
 }
 
 
-#contenu_general--left_side--under
+.contenu_general--left_side--under
 {
 	background-color: #edeff1;
   	padding: 5px;
@@ -69,7 +89,7 @@ h2
 }
 
 
-#contenu_general--right_side
+.contenu_general--right_side
 {
 	padding:20px;
 	height: 900px;
@@ -91,7 +111,7 @@ h2
 
 }
 
-#contenu_general--right_side--parametres
+.contenu_general--right_side--parametres
 {
 
 	overflow: auto;

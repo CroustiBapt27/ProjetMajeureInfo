@@ -433,7 +433,7 @@ h6 {
   margin-bottom: 15px;
 }
 h6 {
-  font-weight: normal;
+  font-weight: normal; 
 }
 h1,
 .h1 {
@@ -3827,7 +3827,7 @@ fieldset[disabled] .input-group-btn .btn-default.active {
 .select2-drop.show-select-search .select2-search {
   display: block;
 }
-.select2-drop.show-select-search .select2-search + .select2-results > li:first-child .select2-result-label {
+.select2-drop.show-select-search .select2-search + .select2-results > li:first-child .select2-result-{
   border-radius: 0;
 }
 .select2-drop .select2-results {
@@ -4055,7 +4055,7 @@ fieldset[disabled] .input-group-btn .btn-default.active {
 .navbar {
   font-size: 16px;
   min-height: 53px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   border: none;
   border-radius: 6px;
 }
