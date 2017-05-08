@@ -1,28 +1,72 @@
+var cptCommande=0;
+
 $(document).ready(function(){
-  $("#myButton").click(function(){
-	  	$.post("rest/cmd/UP",
-    		  {},
-    		  function(data,status){
-    		    alert("Post Done received data: " + data + "\nStatus: " + status);
-    	});    
+  	//identification hello, récupérer identifiant
+	
+	$.post("rest/cmd/id",
+	  		  {},
+	  		  function(data,status){
+	  			$.cookie('login', data.login, { path: '/' });
+	  			$.cookie('token', data.token, { path: '/' });
+	  		   // alert("Login: " + data.login + "\nToken: " + data.token);
+	  		    
+	  	});
+	setInterval(function(){
+		$.ajax({
+		       url : 'rest/cmd/check', // La ressource ciblée
+		       type : 'POST', // Le type de la requête HTTP.
+		       data : "{\"login\":" + $.cookie('login') + ",\"cptCommande\":\""+cptCommande+"\"}",
+		       success: function(data,status){
+		    	   cptCommande=data.cpt;
+		    	   var etat=data.etat;
+		    	   //alert(cptCommande);
+		    	   if(etat=="0")
+	    		   {
+		    		   
+	    		   //alert("commande dispo");
+	    		   $("#myButton").find('span').toggleClass('glyphicon-ok').toggleClass('glyphicon-off');}  //visualisation
+		       
+		    	   else if(etat=="2")
+		   {
+		   //alert("commande dispo");
+		   $("#myButton").find('span').toggleClass('glyphicon-remove').toggleClass('glyphicon-off');}  //visualisation
+
+    }
+	  	});
+},1000000);
+	
+	$("#myButton").click(function(){
+
+	   	//demande connection : synchro puis bloquer + envoi identifiant
+	  $.ajax({
+	       url : 'rest/cmd/conn', // La ressource ciblée
+	       type : 'POST', // Le type de la requête HTTP.
+	       data : "{\"login\":" + $.cookie('login') + ",\"token\":\""+ $.cookie('token')+"\"}",
+	       success: function(data,status){
+	    	  // alert("retour: " + data.pilotage);
+	    	   //alert("\ncompare: " +(data.pilotage).localeCompare('1'));
+	    	   
+	    	   var pilote=data.pilotage;
+	    	   
+	    	   //alert("pilote: " + pilote);
+	    	   if(pilote=="1")
+	    		   {
+	    		   alert("1");
+	    		   $("#myButton").find('span').toggleClass('glyphicon-off').toggleClass('glyphicon-ok');}  //visualisation
+	    	   else if(pilote=="2")
+    		   {
+    		  alert("2");
+    		   $("#myButton").find('span').toggleClass('glyphicon-ok').toggleClass('glyphicon-off');}  
+	    	   else if(pilote=="0")
+	    		   {
+	    		   alert("0");
+	    		   $("#myButton").find('span').toggleClass('glyphicon-off').toggleClass('glyphicon-remove');}  //visualisation
+	    	   
+	       }  
+	  	
+	  });
+	    	
+	  	
   });
-
-  
-
-  $("#myButton2").click(function(){
-	  	$.get("rest/cmd/env",
-  		  function(data,status){
-	  		
-	  		for(i in data.data){
-	  			$("#myContent").append("<h6>---------------------------</h6>");
-	  			$("#myContent").append("<h5> X:"+data.data[i].x+",Y:"+data.data[i].y+"</h5>");
-	  			$("#myContent").append("<h5> Value:"+data.data[i].val+"</h5>");
-	  			$("#myContent").append("<h6>---------------------------</h6>");
-	  			$("#mylastContent").text(data.data[i].val);
-	  			
-	  		}
-	  		
-  		    alert("Get Done received data: " + data + "\nStatus: " + status);
-  	});    
 });
-});
+
